@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F72AF</color>
+    <color name="colorPrimaryDark">#112D4E</color>
+    <color name="colorAccent">#112D4E</color>
+
+    <color name="LightBlack">#fafafa</color>
+    <color name="Black12">#1f000000</color>
+    <color name="Black38">#61000000</color>
+    <color name="Black54">#8a000000</color>
+    <color name="Black87">#dd000000</color>
+
+    <color name="ConnectivityGreen">#169422</color>
+    <color name="DarkRed">#9b1836</color>
+    <color name="LightRed">#e42550</color>
+    <color name="white">#ffffff</color>
+    <color name="pink">#ff6b95</color>
+    <color name="pale_pink">#8eff6b95</color>
+    <color name="art">#ffeb3b</color>
+    <color name="dance">#9c27b0</color>
+    <color name="literature">#607d8b</color>
+    <color name="film">#795548</color>
+    <color name="photography">#2196f3</color>
+    <color name="music">#ef5350</color>
+    <color name="fashion">#283593</color>
+    <color name="design">#0097a7</color>
+    <color name="travel">#8bc34a</color>
+
+</resources>

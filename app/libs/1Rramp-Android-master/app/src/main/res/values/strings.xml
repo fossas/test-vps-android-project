@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">1Ramp</string>
+    <string name="onboarding_title_1">Join communities</string>
+    <string name="onboarding_title_2">Share your work</string>
+    <string name="onboarding_title_3">Earn rewards</string>
+    <string name="onboarding_content_1">Grow with the communities of your interest</string>
+    <string name="onboarding_content_2">Share photos and write blogs</string>
+    <string name="onboarding_content_3">If you are good at something, don’t post it for free</string>
+    <string name="star_info">%1$.1f star from %2$d</string>
+    <string name="default_wall_pic">https://user-images.githubusercontent.com/10809719/34511255-2d3d8592-f080-11e7-9540-43d153a96c33.png</string>
+    <string name="post_subtitle_format">| %1$s</string>
+    <string name="steem_user_profile_pic_format">https://steemitimages.com/u/%s/avatar</string>
+    <string name="hapcoins_format">$%1$s Earned</string>
+    <string name="comment_format">%1d Comments</string>
+    <string name="unregistered_user_profile_msg"> User not registered on 1ramp </string>
+    <string name="steemit_signup">https://signup.steemit.com/</string>
+    <string name="connectivity_lost">Connectivity Lost!</string>
+    <string name="connectivity_established">Connection established !</string>
+    <string name="failed_to_update_communities">Failed to update communities</string>
+    <string name="community_updated">Community Updated!</string>
+    <string name="failed_to_fetch_communities">Failed to fetch communities</string>
+    <string name="steem_user_profile_pic_format_large">https://steemitimages.com/u/%s/avatar/large</string>
+    <string name="profile_follower_count_text">%1$d Followers</string>
+    <string name="profile_follower_count_text_singular">%1$d Follower</string>
+    <string name="profile_following_count_text_plural">%1$d Followings</string>
+    <string name="profile_following_count_text_singular">%1$d Following</string>
+    <string name="loading_community_message">Loading communities...</string>
+    <string name="token_request_loading_message">Loading...</string>
+    <string name="community_save_progress_mesaage">Saving your communities...</string>
+    <string name="app_exit_alert_message">Exit?</string>
+    <string name="comment_fetch_error_text">Error occurred while fetching comments.</string>
+    <string name="power_down_warning">Leaving less than 5 STEEM POWER in your account is not recommended and can leave your account in an unusable state.</string>
+    <string name="undelegate_message">To cancel (take back) delegation: Delegate 0 STEEM to the account you delegated to.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

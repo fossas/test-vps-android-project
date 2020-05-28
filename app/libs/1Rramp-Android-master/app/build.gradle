@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+ext.crashlyticsVersion = '2.9.4'
+ext.buildToolVersion = '27.0.3'
+ext.firebaseVersionNew = '15.0.2'
+ext.firebaseVersionOld = '15.0.0'
+ext.supportLibVersion = '27.1.1'
+ext.multidexVersion = '1.0.3'
+ext.butterknifeVersion = '8.8.1'
+ext.gsonVersion = '2.8.2'
+ext.retrofitVersion = '2.3.0'
+ext.loggingInterceptorVersion = '3.4.0'
+ext.glideVersion = '4.8.0'
+ext.steemVersion = '0.4.3'
+ext.junitVersion = '4.12'
+ext.roboelectricVersion = '3.0'
+ext.barcodeReaderVersion = '1.1.5'
+ext.roomVersion = '1.0.0'
+ext.archLifecycleVersion = '1.1.0'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "$buildToolsVersion"
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+        }
+        localdebug {
+        }
+    }
+    defaultConfig {
+        applicationId "com.hapramp"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 123
+        versionName "1.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        setProperty("archivesBaseName", "1ramp_" + versionCode + "_" + versionName)
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE-LGPL-2.1.txt'
+        exclude 'META-INF/LICENSE-LGPL-3.txt'
+        exclude 'META-INF/LICENSE-W3C-TEST'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+dependencies {
+    implementation "com.android.support:multidex:$multidexVersion"
+    implementation "com.google.firebase:firebase-core:$firebaseVersionNew"
+    implementation "com.crashlytics.sdk.android:crashlytics:$crashlyticsVersion"
+    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    implementation 'com.google.firebase:firebase-database:16.0.2'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:support-v4:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:cardview-v7:$supportLibVersion"
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'org.apache.commons:commons-lang3:3.7'
+    implementation 'com.facebook.network.connectionclass:connectionclass:1.0.1'
+    implementation "info.androidhive:barcode-reader:$barcodeReaderVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:27.1.1'
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.robolectric:robolectric:$roboelectricVersion"
+    testImplementation "org.robolectric:shadows-multidex:$roboelectricVersion"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    implementation 'com.github.hapramp:steemconnect4j:v1.3.5'
+    implementation 'com.github.bxute:CryptoCoinView:v0.6'
+    implementation 'com.github.bxute:MarkDEditor:v0.20'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation "com.jakewharton.rxbinding2:rxbinding:2.0.0"
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.vladsch.flexmark:flexmark-all:0.34.58'
+    implementation 'com.xw.repo:bubbleseekbar:3.19-lite'
+}
+
+apply plugin: 'com.google.gms.google-services'

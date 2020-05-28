@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_centerVertical="true"
+            android:padding="14dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/action_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_toRightOf="@+id/backBtn"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:text="Contests Leaderboard"
+            android:textColor="@color/Black87"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/leaderboard_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_below="@+id/column_headers" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/column_headers"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/action_bar_container"
+        android:layout_height="36dp">
+
+        <TextView
+            android:id="@+id/rank_header"
+            android:text="RANK"
+            android:textStyle="bold"
+            android:textColor="@color/Black87"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:text="WINNERS"
+            android:layout_toRightOf="@+id/rank_header"
+            android:textStyle="bold"
+            android:textColor="@color/Black87"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="EARNINGS"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="@color/Black87"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/action_bar_container"
+        android:background="@drawable/toolbar_shadow" />
+
+</RelativeLayout>

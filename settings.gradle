@@ -1,0 +1,2 @@
+rootProject.name='vpstest'
+include ':app'

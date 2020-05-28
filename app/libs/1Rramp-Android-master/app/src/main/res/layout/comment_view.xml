@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:id="@+id/commentMetaHolder"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/commentAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+
+        <TextView
+            android:id="@+id/commentOwnerName"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/commentAvatar"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:textColor="@color/Black54"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/created_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:layout_toRightOf="@id/commentAvatar"
+            android:layout_below="@+id/commentOwnerName"
+            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="@color/Black54"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commentMetaHolder"
+        android:layout_marginRight="36dp"
+        android:layout_marginLeft="46dp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/Black38"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/popupMenuDots"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/Black38"
+        android:textSize="24sp" />
+
+</RelativeLayout>

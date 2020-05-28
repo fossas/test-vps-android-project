@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:background="?selectableItemBackgroundBorderless"
+    android:layout_height="104dp">
+
+    <FrameLayout
+        android:id="@+id/community_background"
+        android:layout_width="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:background="@drawable/art_border">
+
+        <ImageView
+            android:id="@+id/community_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/art_filled" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/community_title"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Photography"
+        android:textColor="@color/Black87" />
+</RelativeLayout>
